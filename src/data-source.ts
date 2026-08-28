@@ -4,7 +4,6 @@ import path from 'path';
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { ProductEntity } from './database/product.entity';
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 dotenv.config();
 
 export const dataSourceOptions: DataSourceOptions = {

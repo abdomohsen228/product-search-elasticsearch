@@ -10,4 +10,9 @@ export class ProductController {
     console.log('Received query:', queryDto.query);
     return this.productService.searchProducts(queryDto.query);
   }
+  @Get('elasticsearch')
+  public async searchElasticsearch(@Query() queryDto: QueryDto) {
+    console.log('Received query for Elasticsearch:', queryDto.query);
+    return this.productService.searchElasticsearch(queryDto.query);
+  }
 }

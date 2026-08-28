@@ -4,9 +4,10 @@ import { ProductController } from './product.controller';
 import { ProductService } from './product.service';
 import { GetProductService } from './product.get';
 import { ProductEntity } from 'src/database/product.entity';
+import { ElasticsearchModule } from 'src/elasticsearch/elasticsearch.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([ProductEntity])],
+  imports: [TypeOrmModule.forFeature([ProductEntity]), ElasticsearchModule],
   controllers: [ProductController],
   providers: [ProductService, GetProductService],
 })
