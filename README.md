@@ -10,15 +10,6 @@ npm install
 
 Create a `.env` file:
 
-```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_USERNAME=postgres
-DB_PASSWORD=1234
-DB_DATABASE=products
-DUMMY_JSON_URL=https://dummyjson.com/products
-```
-
 Run the migration and start the API:
 
 ```bash
