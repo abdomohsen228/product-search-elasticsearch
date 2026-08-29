@@ -4,9 +4,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { dataSourceOptions } from './data-source';
 import { ProductModule } from './products/product.module';
+import { ElasticsearchModule } from './elasticsearch/elasticsearch.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(dataSourceOptions), ProductModule],
+  imports: [
+    TypeOrmModule.forRoot(dataSourceOptions),
+    ProductModule,
+    ElasticsearchModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
